@@ -24,25 +24,33 @@ body {
 #modern-adventure-game {
     display: flex;
     flex-direction: column;
-    max-width: 66%;
+    width: 66%;
+    border-radius: 10px;
     align-items: center;
     background-color: rgb(250, 250, 250, 0.1);
     padding: 20px;
 }
-#info-text {
-    color: lightgreen;
-    margin-bottom: 25px;
-    font-size: 40px;
+#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     height: 40vh;
+    width: 90%;
+    color: lightgreen;
+    background: rgb(10, 10, 10, 0.5);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 20px;
+    font-size: x-large;
     overflow: auto;
 }
-#info-text::-webkit-scrollbar {
+#output::-webkit-scrollbar {
     width: 1vw;
 }
-#info-text::-webkit-scrollbar-thumb {
+#output::-webkit-scrollbar-thumb {
     background-color: #5A5A5A;
 }
-#info-text::-webkit-scrollbar-track {
+#output::-webkit-scrollbar-track {
     background-color: lightgray;
 }
 #input-area {
@@ -56,6 +64,9 @@ body {
     justify-content: space-between;
 }
 #input-text {
+    font-family: gameFont;
+    font-size: x-large;
+    padding-left: 10px;
     border: none;
     outline: none;
     background: none;
@@ -70,15 +81,33 @@ body {
     outline: none;
     cursor: pointer;
 }
-#anxiety {
-    font-size: 36px;
-}
 #user-info {
     margin-top: 25px;
     width: 100%;
 }
+#anxiety {
+    font-size: xxx-large;
+}
+/* Change the color of the text of your Anxiety Level
+depending on the level: minimal, low, medium, high, destructive. */
+#anxiety-level[data-level="minimal"] {
+    color: white;
+}
+#anxiety-level[data-level="low"] {
+    color: green;
+}
+#anxiety-level[data-level="medium"] {
+    color: orange;
+}
+#anxiety-level[data-level="high"] {
+    color: orangered;
+}
+#anxiety-level[data-level="destructive"] {
+    color: black;
+}
 .inventory {
     margin-top: 10px;
+    font-size: xx-large;
 }
 /*
 #inventory-list {
